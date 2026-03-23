@@ -1,0 +1,407 @@
+{
+   type: "FeatureCollection",
+   crs: {
+      type: "name",
+      properties: {
+         name: "EPSG:4326"
+      }
+   },
+   features: [
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.23643,
+               22.26918
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.1",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=PYN",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=PYN",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=PYN",
+            LATITUDE: 22.26918,
+            LONGITUDE: 114.23643,
+            hospName_EN: "Pamela Youde Nethersole Eastern Hospital",
+            hospName_SC: "东区尤德夫人那打素医院",
+            hospName_TC: "東區尤德夫人那打素醫院",
+            OBJECTID: 1
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17529,
+               22.275909
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.2",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=RH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=RH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=RH",
+            LATITUDE: 22.275909,
+            LONGITUDE: 114.17529,
+            hospName_EN: "Ruttonjee Hospital",
+            hospName_SC: "律敦治医院",
+            hospName_TC: "律敦治醫院",
+            OBJECTID: 2
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.03151,
+               22.208059
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.3",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=SJH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=SJH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=SJH",
+            LATITUDE: 22.208059,
+            LONGITUDE: 114.03151,
+            hospName_EN: "St. John Hospital",
+            hospName_SC: "长洲医院",
+            hospName_TC: "長洲醫院",
+            OBJECTID: 3
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.13117,
+               22.2704
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.4",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=QMH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=QMH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=QMH",
+            LATITUDE: 22.2704,
+            LONGITUDE: 114.13117,
+            hospName_EN: "Queen Mary Hospital",
+            hospName_SC: "玛丽医院",
+            hospName_TC: "瑪麗醫院",
+            OBJECTID: 4
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.1721,
+               22.31429
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.5",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=KWH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=KWH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=KWH",
+            LATITUDE: 22.31429,
+            LONGITUDE: 114.1721,
+            hospName_EN: "Kwong Wah Hospital",
+            hospName_SC: "广华医院",
+            hospName_TC: "廣華醫院",
+            OBJECTID: 5
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17519,
+               22.30886
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.6",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=QEH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=QEH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=QEH",
+            LATITUDE: 22.30886,
+            LONGITUDE: 114.17519,
+            hospName_EN: "Queen Elizabeth Hospital",
+            hospName_SC: "伊利沙伯医院",
+            hospName_TC: "伊利沙伯醫院",
+            OBJECTID: 6
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.27021,
+               22.317964
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.7",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=TKO",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=TKO",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=TKO",
+            LATITUDE: 22.317964,
+            LONGITUDE: 114.27021,
+            hospName_EN: "Tseung Kwan O Hospital",
+            hospName_SC: "将军澳医院",
+            hospName_TC: "將軍澳醫院",
+            OBJECTID: 7
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.2279,
+               22.322291
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.8",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=UCH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=UCH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=UCH",
+            LATITUDE: 22.322291,
+            LONGITUDE: 114.2279,
+            hospName_EN: "United Christian Hospital",
+            hospName_SC: "基督教联合医院",
+            hospName_TC: "基督教聯合醫院",
+            OBJECTID: 8
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15231,
+               22.340629
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.9",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=CMC",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=CMC",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=CMC",
+            LATITUDE: 22.340629,
+            LONGITUDE: 114.15231,
+            hospName_EN: "Caritas Medical Centre",
+            hospName_SC: "明爱医院",
+            hospName_TC: "明愛醫院",
+            OBJECTID: 9
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.93914,
+               22.282571
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.10",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=NLT",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=NLT",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=NLT",
+            LATITUDE: 22.282571,
+            LONGITUDE: 113.93914,
+            hospName_EN: "North Lantau Hospital",
+            hospName_SC: "北大屿山医院",
+            hospName_TC: "北大嶼山醫院",
+            OBJECTID: 10
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.1347,
+               22.340057
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.11",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=PMH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=PMH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=PMH",
+            LATITUDE: 22.340057,
+            LONGITUDE: 114.1347,
+            hospName_EN: "Princess Margaret Hospital",
+            hospName_SC: "玛嘉烈医院",
+            hospName_TC: "瑪嘉烈醫院",
+            OBJECTID: 11
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.11956,
+               22.369548
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.12",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=YCH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=YCH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=YCH",
+            LATITUDE: 22.369548,
+            LONGITUDE: 114.11956,
+            hospName_EN: "Yan Chai Hospital",
+            hospName_SC: "仁济医院",
+            hospName_TC: "仁濟醫院",
+            OBJECTID: 12
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17479,
+               22.458696
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.13",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=AHN",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=AHN",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=AHN",
+            LATITUDE: 22.458696,
+            LONGITUDE: 114.17479,
+            hospName_EN: "Alice Ho Miu Ling Nethersole Hospital",
+            hospName_SC: "雅丽氏何妙龄那打素医院",
+            hospName_TC: "雅麗氏何妙齡那打素醫院",
+            OBJECTID: 13
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.12456,
+               22.496832
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.14",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=NDH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=NDH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=NDH",
+            LATITUDE: 22.496832,
+            LONGITUDE: 114.12456,
+            hospName_EN: "North District Hospital",
+            hospName_SC: "北区医院",
+            hospName_TC: "北區醫院",
+            OBJECTID: 14
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.20129,
+               22.379939
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.15",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=PWH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=PWH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=PWH",
+            LATITUDE: 22.379939,
+            LONGITUDE: 114.20129,
+            hospName_EN: "Prince of Wales Hospital",
+            hospName_SC: "威尔斯亲王医院",
+            hospName_TC: "威爾斯親王醫院",
+            OBJECTID: 15
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.04159,
+               22.44523
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.16",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=POH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=POH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=POH",
+            LATITUDE: 22.44523,
+            LONGITUDE: 114.04159,
+            hospName_EN: "Pok Oi Hospital",
+            hospName_SC: "博爱医院",
+            hospName_TC: "博愛醫院",
+            OBJECTID: 16
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.99585,
+               22.458704
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.17",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=TSH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=TSH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=TSH",
+            LATITUDE: 22.458704,
+            LONGITUDE: 113.99585,
+            hospName_EN: "Tin Shui Wai Hospital",
+            hospName_SC: "天水围医院",
+            hospName_TC: "天水圍醫院",
+            OBJECTID: 17
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.97621,
+               22.40708
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.18",
+            JSON_EN: "https://www.ha.org.hk/aedwt/index.html?Lang=chien&AEHospital=TMH",
+            JSON_SC: "https://www.ha.org.hk/aedwt/index.html?Lang=chigb&AEHospital=TMH",
+            JSON_TC: "https://www.ha.org.hk/aedwt/index.html?Lang=chib5&AEHospital=TMH",
+            LATITUDE: 22.40708,
+            LONGITUDE: 113.97621,
+            hospName_EN: "Tuen Mun Hospital",
+            hospName_SC: "屯门医院",
+            hospName_TC: "屯門醫院",
+            OBJECTID: 18
+         }
+      }
+   ]
+}

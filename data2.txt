@@ -1,0 +1,1639 @@
+{
+   type: "FeatureCollection",
+   crs: {
+      type: "name",
+      properties: {
+         name: "EPSG:4326"
+      }
+   },
+   features: [
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.127867,
+               22.498377
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.1",
+            CLINIC_EN: "North District Family Medicine Integrated Centre",
+            CLINIC_SC: "北区家庭医学综合中心",
+            CLINIC_TC: "北區家庭醫學綜合中心",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=North+District+Family+Medicine+Integrated+Centre",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=北区家庭医学综合中心",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=北區家庭醫學綜合中心",
+            LATITUDE: 22.49837719,
+            LONGITUDE: 114.1278673,
+            OBJECTID: 1
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.205,
+               22.291367
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.2",
+            CLINIC_EN: "North Point Anne Black Family Medicine Clinic",
+            CLINIC_SC: "北角柏立基夫人家庭医学诊所",
+            CLINIC_TC: "北角柏立基夫人家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=North+Point+Anne+Black+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=北角柏立基夫人家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=北角柏立基夫人家庭醫學診所",
+            LATITUDE: 22.291367,
+            LONGITUDE: 114.205,
+            OBJECTID: 2
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.23426,
+               22.265297
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.3",
+            CLINIC_EN: "Chai Wan Family Medicine Clinic",
+            CLINIC_SC: "柴湾家庭医学诊所",
+            CLINIC_TC: "柴灣家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Chai+Wan+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=柴湾家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=柴灣家庭醫學診所",
+            LATITUDE: 22.265297,
+            LONGITUDE: 114.23426,
+            OBJECTID: 3
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.11109,
+               22.224294
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.4",
+            CLINIC_EN: "North Lamma Family Medicine Clinic",
+            CLINIC_SC: "北南丫家庭医学诊所",
+            CLINIC_TC: "北南丫家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=North+Lamma+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=北南丫家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=北南丫家庭醫學診所",
+            LATITUDE: 22.224294,
+            LONGITUDE: 114.11109,
+            OBJECTID: 4
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.03922,
+               22.28357
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.5",
+            CLINIC_EN: "Peng Chau Family Medicine Clinic",
+            CLINIC_SC: "坪洲家庭医学诊所",
+            CLINIC_TC: "坪洲家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Peng+Chau+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=坪洲家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=坪洲家庭醫學診所",
+            LATITUDE: 22.28357,
+            LONGITUDE: 114.03922,
+            OBJECTID: 5
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.22382,
+               22.284589
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.6",
+            CLINIC_EN: "Sai Wan Ho Family Medicine Clinic",
+            CLINIC_SC: "西湾河家庭医学诊所",
+            CLINIC_TC: "西灣河家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Sai+Wan+Ho+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=西湾河家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=西灣河家庭醫學診所",
+            LATITUDE: 22.284589,
+            LONGITUDE: 114.22382,
+            OBJECTID: 6
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.22834,
+               22.276487
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.7",
+            CLINIC_EN: "Shau Kei Wan Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "筲箕湾赛马会家庭医学诊所",
+            CLINIC_TC: "筲箕灣賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Shau+Kei+Wan+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=筲箕湾赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=筲箕灣賽馬會家庭醫學診所",
+            LATITUDE: 22.276487,
+            LONGITUDE: 114.22834,
+            OBJECTID: 7
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.13158,
+               22.205599
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.8",
+            CLINIC_EN: "Sok Kwu Wan Family Medicine Clinic",
+            CLINIC_SC: "索罟湾家庭医学诊所",
+            CLINIC_TC: "索罟灣家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Sok+Kwu+Wan+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=索罟湾家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=索罟灣家庭醫學診所",
+            LATITUDE: 22.205599,
+            LONGITUDE: 114.13158,
+            OBJECTID: 8
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.03111,
+               22.20822
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.9",
+            CLINIC_EN: "St. John Hospital Family Medicine Clinic",
+            CLINIC_SC: "长洲医院家庭医学诊所",
+            CLINIC_TC: "長洲醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=St.+John+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=长洲医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=長洲醫院家庭醫學診所",
+            LATITUDE: 22.20822,
+            LONGITUDE: 114.03111,
+            OBJECTID: 9
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.21339,
+               22.217729
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.10",
+            CLINIC_EN: "Stanley Family Medicine Clinic",
+            CLINIC_SC: "赤柱家庭医学诊所",
+            CLINIC_TC: "赤柱家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Stanley+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=赤柱家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=赤柱家庭醫學診所",
+            LATITUDE: 22.217729,
+            LONGITUDE: 114.21339,
+            OBJECTID: 10
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.19026,
+               22.274725
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.11",
+            CLINIC_EN: "Tung Wah Eastern Hospital Family Medicine Clinic",
+            CLINIC_SC: "东华东院家庭医学诊所",
+            CLINIC_TC: "東華東院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tung+Wah+Eastern+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=东华东院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=東華東院家庭醫學診所",
+            LATITUDE: 22.274725,
+            LONGITUDE: 114.19026,
+            OBJECTID: 11
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17774,
+               22.275313
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.12",
+            CLINIC_EN: "Wan Chai Violet Peel Family Medicine Clinic",
+            CLINIC_SC: "湾仔贝夫人家庭医学诊所",
+            CLINIC_TC: "灣仔貝夫人家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Wan+Chai+Violet+Peel+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=湾仔贝夫人家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=灣仔貝夫人家庭醫學診所",
+            LATITUDE: 22.275313,
+            LONGITUDE: 114.17774,
+            OBJECTID: 12
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.23949,
+               22.262901
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.13",
+            CLINIC_EN: "Wan Tsui Family Medicine Clinic",
+            CLINIC_SC: "环翠家庭医学诊所",
+            CLINIC_TC: "環翠家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Wan+Tsui+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=环翠家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=環翠家庭醫學診所",
+            LATITUDE: 22.262901,
+            LONGITUDE: 114.23949,
+            OBJECTID: 13
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15634,
+               22.249953
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.14",
+            CLINIC_EN: "Aberdeen Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "香港仔赛马会家庭医学诊所",
+            CLINIC_TC: "香港仔賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Aberdeen+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=香港仔赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=香港仔賽馬會家庭醫學診所",
+            LATITUDE: 22.249953,
+            LONGITUDE: 114.15634,
+            OBJECTID: 14
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15361,
+               22.243243
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.15",
+            CLINIC_EN: "Ap Lei Chau Family Medicine Clinic",
+            CLINIC_SC: "鸭脷洲家庭医学诊所",
+            CLINIC_TC: "鴨脷洲家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Ap+Lei+Chau+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=鸭脷洲家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=鴨脷洲家庭醫學診所",
+            LATITUDE: 22.243243,
+            LONGITUDE: 114.15361,
+            OBJECTID: 15
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15265,
+               22.284513
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.16",
+            CLINIC_EN: "Central District Family Medicine Clinic",
+            CLINIC_SC: "中区家庭医学诊所",
+            CLINIC_TC: "中區家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Central+District+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=中区家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=中區家庭醫學診所",
+            LATITUDE: 22.284513,
+            LONGITUDE: 114.15265,
+            OBJECTID: 16
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.12396,
+               22.281851
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.17",
+            CLINIC_EN: "Kennedy Town Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "坚尼地城赛马会家庭医学诊所",
+            CLINIC_TC: "堅尼地城賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kennedy+Town+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=坚尼地城赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=堅尼地城賽馬會家庭醫學診所",
+            LATITUDE: 22.281851,
+            LONGITUDE: 114.12396,
+            OBJECTID: 17
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.14504,
+               22.286435
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.18",
+            CLINIC_EN: "Sai Ying Pun Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "西营盘赛马会家庭医学诊所",
+            CLINIC_TC: "西營盤賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Sai+Ying+Pun+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=西营盘赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=西營盤賽馬會家庭醫學診所",
+            LATITUDE: 22.286435,
+            LONGITUDE: 114.14504,
+            OBJECTID: 18
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.14678,
+               22.28546
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.19",
+            CLINIC_EN: "Tung Wah Hospital Family Medicine Clinic",
+            CLINIC_SC: "东华医院家庭医学诊所",
+            CLINIC_TC: "東華醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tung+Wah+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=东华医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=東華醫院家庭醫學診所",
+            LATITUDE: 22.28546,
+            LONGITUDE: 114.14678,
+            OBJECTID: 19
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17904,
+               22.322407
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.20",
+            CLINIC_EN: "Central Kowloon Family Medicine Clinic",
+            CLINIC_SC: "中九龙家庭医学诊所",
+            CLINIC_TC: "中九龍家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Central+Kowloon+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=中九龙家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=中九龍家庭醫學診所",
+            LATITUDE: 22.322407,
+            LONGITUDE: 114.17904,
+            OBJECTID: 20
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.20795,
+               22.339517
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.21",
+            CLINIC_EN: "East Kowloon Family Medicine Clinic",
+            CLINIC_SC: "东九龙家庭医学诊所",
+            CLINIC_TC: "東九龍家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=East+Kowloon+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=东九龙家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=東九龍家庭醫學診所",
+            LATITUDE: 22.339517,
+            LONGITUDE: 114.20795,
+            OBJECTID: 21
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.18874,
+               22.33568
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.22",
+            CLINIC_EN: "Hong Kong Buddhist Hospital Family Medicine Clinic",
+            CLINIC_SC: "香港佛教医院家庭医学诊所",
+            CLINIC_TC: "香港佛教醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Hong+Kong+Buddhist+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=香港佛教医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=香港佛教醫院家庭醫學診所",
+            LATITUDE: 22.33568,
+            LONGITUDE: 114.18874,
+            OBJECTID: 22
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.1856,
+               22.308139
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.23",
+            CLINIC_EN: "Hung Hom Family Medicine Clinic",
+            CLINIC_SC: "红磡家庭医学诊所",
+            CLINIC_TC: "紅磡家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Hung+Hom+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=红磡家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=紅磡家庭醫學診所",
+            LATITUDE: 22.308139,
+            LONGITUDE: 114.1856,
+            OBJECTID: 23
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17168,
+               22.31547
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.24",
+            CLINIC_EN: "Kwong Wah Hospital Family Medicine Clinic",
+            CLINIC_SC: "广华医院家庭医学诊所",
+            CLINIC_TC: "廣華醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kwong+Wah+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=广华医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=廣華醫院家庭醫學診所",
+            LATITUDE: 22.31547,
+            LONGITUDE: 114.17168,
+            OBJECTID: 24
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.18904,
+               22.330372
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.25",
+            CLINIC_EN: "Kowloon City Lee Kee Memorial Family Medicine Clinic",
+            CLINIC_SC: "九龙城李基纪念家庭医学诊所",
+            CLINIC_TC: "九龍城李基紀念家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kowloon+City+Lee+Kee+Memorial+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=九龙城李基纪念家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=九龍城李基紀念家庭醫學診所",
+            LATITUDE: 22.330372,
+            LONGITUDE: 114.18904,
+            OBJECTID: 25
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16612,
+               22.32275
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.26",
+            CLINIC_EN: "Mong Kok Li Po Chun Family Medicine Clinic",
+            CLINIC_SC: "旺角李宝椿家庭医学诊所",
+            CLINIC_TC: "旺角李寶椿家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Mong+Kok+Li+Po+Chun+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=旺角李宝椿家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=旺角李寶椿家庭醫學診所",
+            LATITUDE: 22.32275,
+            LONGITUDE: 114.16612,
+            OBJECTID: 26
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.19657,
+               22.345588
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.27",
+            CLINIC_EN: "Our Lady of Maryknoll Hospital Family Medicine Clinic",
+            CLINIC_SC: "圣母医院家庭医学诊所",
+            CLINIC_TC: "聖母醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Our+Lady+of+Maryknoll+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=圣母医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=聖母醫院家庭醫學診所",
+            LATITUDE: 22.345588,
+            LONGITUDE: 114.19657,
+            OBJECTID: 27
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.19563,
+               22.332493
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.28",
+            CLINIC_EN: "San Po Kong Robert Black Family Medicine Clinic",
+            CLINIC_SC: "新蒲岗柏立基家庭医学诊所",
+            CLINIC_TC: "新蒲崗柏立基家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=San+Po+Kong+Robert+Black+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=新蒲岗柏立基家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=新蒲崗柏立基家庭醫學診所",
+            LATITUDE: 22.332493,
+            LONGITUDE: 114.19563,
+            OBJECTID: 28
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.18799,
+               22.317142
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.29",
+            CLINIC_EN: "To Kwa Wan Shun Tak Fraternal Association Leung Kau Kui Family Medicine Clinic",
+            CLINIC_SC: "土瓜湾顺德联谊会梁銶琚家庭医学诊所",
+            CLINIC_TC: "土瓜灣順德聯誼會梁銶琚家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=To+Kwa+Wan+Shun+Tak+Fraternal+Association+Leung+Kau+Kui+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=土瓜湾顺德联谊会梁銶琚家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=土瓜灣順德聯誼會梁銶琚家庭醫學診所",
+            LATITUDE: 22.317142,
+            LONGITUDE: 114.18799,
+            OBJECTID: 29
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.18538,
+               22.339114
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.30",
+            CLINIC_EN: "Wang Tau Hom Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "横头磡赛马会家庭医学诊所",
+            CLINIC_TC: "橫頭磡賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Wang+Tau+Hom+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=横头磡赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=橫頭磡賽馬會家庭醫學診所",
+            LATITUDE: 22.339114,
+            LONGITUDE: 114.18538,
+            OBJECTID: 30
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.19749,
+               22.346915
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.31",
+            CLINIC_EN: "Tsz Wan Shan Wu York Yu Family Medicine Clinic",
+            CLINIC_SC: "慈云山伍若瑜家庭医学诊所",
+            CLINIC_TC: "慈雲山伍若瑜家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tsz+Wan+Shan+Wu+York+Yu+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=慈云山伍若瑜家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=慈雲山伍若瑜家庭醫學診所",
+            LATITUDE: 22.346915,
+            LONGITUDE: 114.19749,
+            OBJECTID: 31
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16927,
+               22.30962
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.32",
+            CLINIC_EN: "Yau Ma Tei Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "油麻地赛马会家庭医学诊所",
+            CLINIC_TC: "油麻地賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Yau+Ma+Tei+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=油麻地赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=油麻地賽馬會家庭醫學診所",
+            LATITUDE: 22.30962,
+            LONGITUDE: 114.16927,
+            OBJECTID: 32
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.2071,
+               22.328627
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.33",
+            CLINIC_EN: "Kowloon Bay Family Medicine Clinic",
+            CLINIC_SC: "九龙湾家庭医学诊所",
+            CLINIC_TC: "九龍灣家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kowloon+Bay+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=九龙湾家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=九龍灣家庭醫學診所",
+            LATITUDE: 22.328627,
+            LONGITUDE: 114.2071,
+            OBJECTID: 33
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.22604,
+               22.314913
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.34",
+            CLINIC_EN: "Kwun Tong Family Medicine Integrated Centre",
+            CLINIC_SC: "观塘家庭医学综合中心",
+            CLINIC_TC: "觀塘家庭醫學綜合中心",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kwun+Tong+Family+Medicine+Integrated+Centre",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=观塘家庭医学综合中心",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=觀塘家庭醫學綜合中心",
+            LATITUDE: 22.314913,
+            LONGITUDE: 114.22604,
+            OBJECTID: 34
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.23333,
+               22.310567
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.35",
+            CLINIC_EN: "Lam Tin Family Medicine Clinic",
+            CLINIC_SC: "蓝田家庭医学诊所",
+            CLINIC_TC: "藍田家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Lam+Tin+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=蓝田家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=藍田家庭醫學診所",
+            LATITUDE: 22.310567,
+            LONGITUDE: 114.23333,
+            OBJECTID: 35
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.27225,
+               22.381755
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.36",
+            CLINIC_EN: "Sai Kung Mona Fong Family Medicine Clinic",
+            CLINIC_SC: "西贡方逸华家庭医学诊所",
+            CLINIC_TC: "西貢方逸華家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Sai+Kung+Mona+Fong+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=西贡方逸华家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=西貢方逸華家庭醫學診所",
+            LATITUDE: 22.381755,
+            LONGITUDE: 114.27225,
+            OBJECTID: 36
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.21696,
+               22.317065
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.37",
+            CLINIC_EN: "Ngau Tau Kok Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "牛头角赛马会家庭医学诊所",
+            CLINIC_TC: "牛頭角賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Ngau+Tau+Kok+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=牛头角赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=牛頭角賽馬會家庭醫學診所",
+            LATITUDE: 22.317065,
+            LONGITUDE: 114.21696,
+            OBJECTID: 37
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.22689,
+               22.330012
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.38",
+            CLINIC_EN: "Shun Lee Family Medicine Clinic",
+            CLINIC_SC: "顺利家庭医学诊所",
+            CLINIC_TC: "順利家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Shun+Lee+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=顺利家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=順利家庭醫學診所",
+            LATITUDE: 22.330012,
+            LONGITUDE: 114.22689,
+            OBJECTID: 38
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.26794,
+               22.317785
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.39",
+            CLINIC_EN: "Tseung Kwan O (Po Ning Road) Family Medicine Clinic",
+            CLINIC_SC: "将军澳（宝宁路）家庭医学诊所",
+            CLINIC_TC: "將軍澳（寶寧路）家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tseung+Kwan+O+(Po+Ning+Road)+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=将军澳（宝宁路）家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=將軍澳（寶寧路）家庭醫學診所",
+            LATITUDE: 22.317785,
+            LONGITUDE: 114.26794,
+            OBJECTID: 39
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.25946,
+               22.325159
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.40",
+            CLINIC_EN: "Tseung Kwan O Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "将军澳赛马会家庭医学诊所",
+            CLINIC_TC: "將軍澳賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tseung+Kwan+O+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=将军澳赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=將軍澳賽馬會家庭醫學診所",
+            LATITUDE: 22.325159,
+            LONGITUDE: 114.25946,
+            OBJECTID: 40
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15231,
+               22.340629
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.41",
+            CLINIC_EN: "Caritas Medical Centre Family Medicine Clinic",
+            CLINIC_SC: "明爱医院家庭医学诊所",
+            CLINIC_TC: "明愛醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Caritas+Medical+Centre+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=明爱医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=明愛醫院家庭醫學診所",
+            LATITUDE: 22.340629,
+            LONGITUDE: 114.15231,
+            OBJECTID: 41
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15852,
+               22.340467
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.42",
+            CLINIC_EN: "Cheung Sha Wan Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "长沙湾赛马会家庭医学诊所",
+            CLINIC_TC: "長沙灣賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Cheung+Sha+Wan+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=长沙湾赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=長沙灣賽馬會家庭醫學診所",
+            LATITUDE: 22.340467,
+            LONGITUDE: 114.15852,
+            OBJECTID: 42
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.12801,
+               22.352426
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.43",
+            CLINIC_EN: "Ha Kwai Chung Family Medicine Clinic",
+            CLINIC_SC: "下葵涌家庭医学诊所",
+            CLINIC_TC: "下葵涌家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Ha+Kwai+Chung+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=下葵涌家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=下葵涌家庭醫學診所",
+            LATITUDE: 22.352426,
+            LONGITUDE: 114.12801,
+            OBJECTID: 43
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.11554,
+               22.370556
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.44",
+            CLINIC_EN: "Tsuen Wan Lady Trench Family Medicine Clinic",
+            CLINIC_SC: "荃湾戴麟趾夫人家庭医学诊所",
+            CLINIC_TC: "荃灣戴麟趾夫人家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tsuen+Wan+Lady+Trench+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=荃湾戴麟趾夫人家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=荃灣戴麟趾夫人家庭醫學診所",
+            LATITUDE: 22.370556,
+            LONGITUDE: 114.11554,
+            OBJECTID: 44
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.13674,
+               22.376161
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.45",
+            CLINIC_EN: "Kwai Chung Mrs Wu York Yu Family Medicine Clinic",
+            CLINIC_SC: "葵涌伍若瑜夫人家庭医学诊所",
+            CLINIC_TC: "葵涌伍若瑜夫人家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kwai+Chung+Mrs+Wu+York+Yu+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=葵涌伍若瑜夫人家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=葵涌伍若瑜夫人家庭醫學診所",
+            LATITUDE: 22.376161,
+            LONGITUDE: 114.13674,
+            OBJECTID: 45
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.99797,
+               22.266111
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.46",
+            CLINIC_EN: "Mui Wo Family Medicine Clinic",
+            CLINIC_SC: "梅窝家庭医学诊所",
+            CLINIC_TC: "梅窩家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Mui+Wo+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=梅窝家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=梅窩家庭醫學診所",
+            LATITUDE: 22.266111,
+            LONGITUDE: 113.99797,
+            OBJECTID: 46
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.15418,
+               22.33036
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.47",
+            CLINIC_EN: "Nam Cheong Family Medicine Clinic",
+            CLINIC_SC: "南昌家庭医学诊所",
+            CLINIC_TC: "南昌家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Nam+Cheong+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=南昌家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=南昌家庭醫學診所",
+            LATITUDE: 22.33036,
+            LONGITUDE: 114.15418,
+            OBJECTID: 47
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.17068,
+               22.334129
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.48",
+            CLINIC_EN: "Nam Shan Family Medicine Clinic",
+            CLINIC_SC: "南山家庭医学诊所",
+            CLINIC_TC: "南山家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Nam+Shan+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=南山家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=南山家庭醫學診所",
+            LATITUDE: 22.334129,
+            LONGITUDE: 114.17068,
+            OBJECTID: 48
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.14032,
+               22.369859
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.49",
+            CLINIC_EN: "North Kwai Chung Family Medicine Clinic",
+            CLINIC_SC: "北葵涌家庭医学诊所",
+            CLINIC_TC: "北葵涌家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=North+Kwai+Chung+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=北葵涌家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=北葵涌家庭醫學診所",
+            LATITUDE: 22.369859,
+            LONGITUDE: 114.14032,
+            OBJECTID: 49
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.93914,
+               22.282571
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.50",
+            CLINIC_EN: "North Lantau Family Medicine Integrated Centre (North Lantau Hospital)",
+            CLINIC_SC: "北大屿山家庭医学综合中心（北大屿山医院）",
+            CLINIC_TC: "北大嶼山家庭醫學綜合中心（北大嶼山醫院）",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=North+Lantau+Family+Medicine+Integrated+Centre+(North+Lantau+Hospital)",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=北大屿山家庭医学综合中心（北大屿山医院）",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=北大嶼山家庭醫學綜合中心（北大嶼山醫院）",
+            LATITUDE: 22.282571,
+            LONGITUDE: 113.93914,
+            OBJECTID: 50
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16741,
+               22.33184
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.51",
+            CLINIC_EN: "Shek Kip Mei Family Medicine Clinic",
+            CLINIC_SC: "石硖尾家庭医学诊所",
+            CLINIC_TC: "石硤尾家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Shek+Kip+Mei+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=石硖尾家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=石硤尾家庭醫學診所",
+            LATITUDE: 22.33184,
+            LONGITUDE: 114.16741,
+            OBJECTID: 51
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.1254,
+               22.360806
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.52",
+            CLINIC_EN: "South Kwai Chung Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "南葵涌赛马会家庭医学诊所",
+            CLINIC_TC: "南葵涌賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=South+Kwai+Chung+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=南葵涌赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=南葵涌賽馬會家庭醫學診所",
+            LATITUDE: 22.360806,
+            LONGITUDE: 114.1254,
+            OBJECTID: 52
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.85801,
+               22.255756
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.53",
+            CLINIC_EN: "Tai O Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "大澳赛马会家庭医学诊所",
+            CLINIC_TC: "大澳賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tai+O+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=大澳赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=大澳賽馬會家庭醫學診所",
+            LATITUDE: 22.255756,
+            LONGITUDE: 113.85801,
+            OBJECTID: 53
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.10594,
+               22.348915
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.54",
+            CLINIC_EN: "Tsing Yi Cheung Hong Family Medicine Clinic",
+            CLINIC_SC: "青衣长康家庭医学诊所",
+            CLINIC_TC: "青衣長康家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tsing+Yi+Cheung+Hong+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=青衣长康家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=青衣長康家庭醫學診所",
+            LATITUDE: 22.348915,
+            LONGITUDE: 114.10594,
+            OBJECTID: 54
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.10593,
+               22.354459
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.55",
+            CLINIC_EN: "Tsing Yi Town Family Medicine Clinic",
+            CLINIC_SC: "青衣市区家庭医学诊所",
+            CLINIC_TC: "青衣市區家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tsing+Yi+Town+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=青衣市区家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=青衣市區家庭醫學診所",
+            LATITUDE: 22.354459,
+            LONGITUDE: 114.10593,
+            OBJECTID: 55
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16045,
+               22.331859
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.56",
+            CLINIC_EN: "West Kowloon Family Medicine Clinic",
+            CLINIC_SC: "西九龙家庭医学诊所",
+            CLINIC_TC: "西九龍家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=West+Kowloon+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=西九龙家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=西九龍家庭醫學診所",
+            LATITUDE: 22.331859,
+            LONGITUDE: 114.16045,
+            OBJECTID: 56
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.11956,
+               22.369548
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.57",
+            CLINIC_EN: "Yan Chai Hospital Family Medicine Clinic",
+            CLINIC_SC: "仁济医院家庭医学诊所",
+            CLINIC_TC: "仁濟醫院家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Yan+Chai+Hospital+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=仁济医院家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=仁濟醫院家庭醫學診所",
+            LATITUDE: 22.369548,
+            LONGITUDE: 114.11956,
+            OBJECTID: 57
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.13905,
+               22.49632
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.58",
+            CLINIC_EN: "Fanling Family Medicine Clinic",
+            CLINIC_SC: "粉岭家庭医学诊所",
+            CLINIC_TC: "粉嶺家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Fanling+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=粉岭家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=粉嶺家庭醫學診所",
+            LATITUDE: 22.49632,
+            LONGITUDE: 114.13905,
+            OBJECTID: 58
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.19182,
+               22.383778
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.59",
+            CLINIC_EN: "Lek Yuen Family Medicine Clinic",
+            CLINIC_SC: "沥源家庭医学诊所",
+            CLINIC_TC: "瀝源家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Lek+Yuen+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=沥源家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=瀝源家庭醫學診所",
+            LATITUDE: 22.383778,
+            LONGITUDE: 114.19182,
+            OBJECTID: 59
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.23494,
+               22.425074
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.60",
+            CLINIC_EN: "Ma On Shan Family Medicine Clinic",
+            CLINIC_SC: "马鞍山家庭医学诊所",
+            CLINIC_TC: "馬鞍山家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Ma+On+Shan+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=马鞍山家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=馬鞍山家庭醫學診所",
+            LATITUDE: 22.425074,
+            LONGITUDE: 114.23494,
+            OBJECTID: 60
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.21016,
+               22.536011
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.61",
+            CLINIC_EN: "Sha Tau Kok Family Medicine Clinic",
+            CLINIC_SC: "沙头角家庭医学诊所",
+            CLINIC_TC: "沙頭角家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Sha+Tau+Kok+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=沙头角家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=沙頭角家庭醫學診所",
+            LATITUDE: 22.536011,
+            LONGITUDE: 114.21016,
+            OBJECTID: 61
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.18411,
+               22.377521
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.62",
+            CLINIC_EN: "Shatin (Tai Wai) Family Medicine Clinic",
+            CLINIC_SC: "沙田（大围）家庭医学诊所",
+            CLINIC_TC: "沙田（大圍）家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Shatin+(Tai+Wai)+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=沙田（大围）家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=沙田（大圍）家庭醫學診所",
+            LATITUDE: 22.377521,
+            LONGITUDE: 114.18411,
+            OBJECTID: 62
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16064,
+               22.5245
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.63",
+            CLINIC_EN: "Ta Kwu Ling Family Medicine Clinic",
+            CLINIC_SC: "打鼓岭家庭医学诊所",
+            CLINIC_TC: "打鼓嶺家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Ta+Kwu+Ling+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=打鼓岭家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=打鼓嶺家庭醫學診所",
+            LATITUDE: 22.5245,
+            LONGITUDE: 114.16064,
+            OBJECTID: 63
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16577,
+               22.454018
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.64",
+            CLINIC_EN: "Tai Po Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "大埔赛马会家庭医学诊所",
+            CLINIC_TC: "大埔賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tai+Po+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=大埔赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=大埔賽馬會家庭醫學診所",
+            LATITUDE: 22.454018,
+            LONGITUDE: 114.16577,
+            OBJECTID: 64
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.16808,
+               22.450162
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.65",
+            CLINIC_EN: "Tai Po Wong Siu Ching Family Medicine Clinic",
+            CLINIC_SC: "大埔王少清家庭医学诊所",
+            CLINIC_TC: "大埔王少清家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tai+Po+Wong+Siu+Ching+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=大埔王少清家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=大埔王少清家庭醫學診所",
+            LATITUDE: 22.450162,
+            LONGITUDE: 114.16808,
+            OBJECTID: 65
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.20151,
+               22.382477
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.66",
+            CLINIC_EN: "Yuen Chau Kok Family Medicine Clinic",
+            CLINIC_SC: "圆洲角家庭医学诊所",
+            CLINIC_TC: "圓洲角家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Yuen+Chau+Kok+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=圆洲角家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=圓洲角家庭醫學診所",
+            LATITUDE: 22.382477,
+            LONGITUDE: 114.20151,
+            OBJECTID: 66
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.07474,
+               22.440106
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.67",
+            CLINIC_EN: "Kam Tin Family Medicine Clinic",
+            CLINIC_SC: "锦田家庭医学诊所",
+            CLINIC_TC: "錦田家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Kam+Tin+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=锦田家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=錦田家庭醫學診所",
+            LATITUDE: 22.440106,
+            LONGITUDE: 114.07474,
+            OBJECTID: 67
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.0271,
+               22.441017
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.68",
+            CLINIC_EN: "Yuen Long Madam Yung Fung Shee Family Medicine Clinic",
+            CLINIC_SC: "元朗容凤书家庭医学诊所",
+            CLINIC_TC: "元朗容鳳書家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Yuen+Long+Madam+Yung+Fung+Shee+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=元朗容凤书家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=元朗容鳳書家庭醫學診所",
+            LATITUDE: 22.441017,
+            LONGITUDE: 114.0271,
+            OBJECTID: 68
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.00583,
+               22.465478
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.69",
+            CLINIC_EN: "Tin Shui Wai (Tin Yip Road) Family Medicine Integrated Centre",
+            CLINIC_SC: "天水围（天业路）家庭医学综合中心",
+            CLINIC_TC: "天水圍（天業路）家庭醫學綜合中心",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tin+Shui+Wai+(Tin+Yip+Road)+Family+Medicine+Integrated+Centre",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=天水围（天业路）家庭医学综合中心",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=天水圍（天業路）家庭醫學綜合中心",
+            LATITUDE: 22.465478,
+            LONGITUDE: 114.00583,
+            OBJECTID: 69
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.00144,
+               22.454546
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.70",
+            CLINIC_EN: "Tin Shui Wai (Tin Shui Road) Family Medicine Clinic",
+            CLINIC_SC: "天水围（天瑞路）家庭医学诊所",
+            CLINIC_TC: "天水圍（天瑞路）家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tin+Shui+Wai+(Tin+Shui+Road)+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=天水围（天瑞路）家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=天水圍（天瑞路）家庭醫學診所",
+            LATITUDE: 22.454546,
+            LONGITUDE: 114.00144,
+            OBJECTID: 70
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.97571,
+               22.399656
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.71",
+            CLINIC_EN: "Tuen Mun Family Medicine Clinic",
+            CLINIC_SC: "屯门家庭医学诊所",
+            CLINIC_TC: "屯門家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tuen+Mun+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=屯门家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=屯門家庭醫學診所",
+            LATITUDE: 22.399656,
+            LONGITUDE: 113.97571,
+            OBJECTID: 71
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.96713,
+               22.37715
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.72",
+            CLINIC_EN: "Tuen Mun Wu Hong Family Medicine Clinic",
+            CLINIC_SC: "屯门湖康家庭医学诊所",
+            CLINIC_TC: "屯門湖康家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tuen+Mun+Wu+Hong+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=屯门湖康家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=屯門湖康家庭醫學診所",
+            LATITUDE: 22.37715,
+            LONGITUDE: 113.96713,
+            OBJECTID: 72
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               113.97914,
+               22.391226
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.73",
+            CLINIC_EN: "Tuen Mun Yan Oi Family Medicine Clinic",
+            CLINIC_SC: "屯门仁爱家庭医学诊所",
+            CLINIC_TC: "屯門仁愛家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Tuen+Mun+Yan+Oi+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=屯门仁爱家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=屯門仁愛家庭醫學診所",
+            LATITUDE: 22.391226,
+            LONGITUDE: 113.97914,
+            OBJECTID: 73
+         }
+      },
+      {
+         type: "Feature",
+         geometry: {
+            type: "Point",
+            coordinates: [
+               114.02317,
+               22.445601
+            ]
+         },
+         properties: {
+            GmlID: "geotagging.74",
+            CLINIC_EN: "Yuen Long Jockey Club Family Medicine Clinic",
+            CLINIC_SC: "元朗赛马会家庭医学诊所",
+            CLINIC_TC: "元朗賽馬會家庭醫學診所",
+            JSON_EN: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=en&clinic=Yuen+Long+Jockey+Club+Family+Medicine+Clinic",
+            JSON_SC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=sc&clinic=元朗赛马会家庭医学诊所",
+            JSON_TC: "https://www.ha.org.hk/pas_gopc/CSDI_GOPD-4w-quota/?ui=N&language=tc&clinic=元朗賽馬會家庭醫學診所",
+            LATITUDE: 22.445601,
+            LONGITUDE: 114.02317,
+            OBJECTID: 74
+         }
+      }
+   ]
+}
