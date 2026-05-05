@@ -1,4 +1,4 @@
-# Conversational AI for Hong Kong's Sustainable Smart City Services
+# Conversational AI for Hong Kong’s Sustainable Mobility and Urban Living Services
 ## Hong Kong Electronics Project Competition 2026 (HKEPC 2026)
 
 ---
