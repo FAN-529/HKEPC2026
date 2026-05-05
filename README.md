@@ -1,5 +1,5 @@
 # Conversational AI for Hong Kong's Sustainable Smart City Services
-## Hong Kong Electronics Project Competition 2026 (HKEPC 2026) Official Submission
+## Hong Kong Electronics Project Competition 2026 (HKEPC 2026)
 
 ---
 
