@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title id="pageTitle">香港多功能 AI 助手</title>
+  <style>
+    /* Premium CSS Styles */
+    :root {
+      --bg-color: #f9f9fb;
+      --chat-bg: #ffffff;
+      --user-msg-bg: #b9d9eb;
+      --user-msg-color: #ffffff;
+      --bot-msg-bg: #d8dcdf;
+      --bot-msg-color: #1d1d1f;
+      --border-color: #e5e5ea;
+      --text-main: #1d1d1f;
+      --text-muted: #86868b;
+      --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-image: radial-gradient(circle at 10% 20%,
+          rgba(216, 241, 230, 0.46) 0%,
+          rgba(233, 226, 251, 0.6) 90.1%);
+      background-color: #fafafa;
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 900px;
+      height: 96vh;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
+      box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 8px 32px rgba(0, 0, 0, 0.05);
+      /* 轻微凹形高光与大阴影 */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin: 0;
+    }
+
+    .lang-switcher {
+      padding: 6px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05), inset -1px -1px 3px rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      backdrop-filter: blur(4px);
+    }
+
+    .chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+
+    .message {
+      width: 100%;
+      display: flex;
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    .message.user {
+      justify-content: flex-end;
+      /* 放右边 */
+    }
+
+    .message.bot {
+      justify-content: flex-start;
+      /* 放左边 */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bubble {
+      max-width: 80%;
+      /* 默认用户气泡自适应 */
+      padding: 12px 18px;
+      border-radius: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      backdrop-filter: blur(20px);
+      /* 增强毛玻璃模糊度 */
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .message.user .bubble {
+      background: linear-gradient(135deg, rgba(0, 122, 255, 0.85) 0%, rgba(0, 82, 212, 0.85) 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom-right-radius: 4px;
+      /* 右侧尖角逻辑 */
+      box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.2), inset -2px -2px 6px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 122, 255, 0.25);
+    }
+
+    .message.bot .bubble {
+      width: 75%;
+      background-color: rgba(255, 255, 255, 0.45);
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-bottom-left-radius: 4px;
+      box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.8), inset -1px -1px 3px rgba(0, 0, 0, 0.05), 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .input-area {
+      padding: 16px 24px 24px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .samples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+      justify-content: flex-start;
+    }
+
+    .sample-btn {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: #1d1d1f;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+      box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.9), inset -1px -1px 3px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .sample-btn:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: translateY(-1px);
+    }
+
+    .input-box {
+      display: flex;
+      gap: 12px;
+      background: rgba(250, 250, 250, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
+      padding: 8px 16px;
+      align-items: flex-end;
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.05), inset -2px -2px 6px rgba(255, 255, 255, 0.7);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .input-box:focus-within {
+      border-color: rgba(0, 122, 255, 0.3);
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.05), inset -2px -2px 6px rgba(255, 255, 255, 0.7), 0 0 0 3px rgba(0, 122, 255, 0.1);
+    }
+
+    textarea {
+      flex: 1;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: inherit;
+      font-size: 15px;
+      resize: none;
+      max-height: 120px;
+      line-height: 1.5;
+      padding: 8px 0;
+      color: var(--text-main);
+    }
+
+    textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .send-btn {
+      background: rgba(0, 122, 255, 0.85);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s;
+      flex-shrink: 0;
+      margin-bottom: 2px;
+      box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 122, 255, 0.2);
+    }
+
+    .send-btn:hover {
+      background: rgba(0, 102, 214, 0.9);
+      transform: scale(1.05);
+    }
+
+    .send-btn:disabled {
+      background: rgba(200, 200, 200, 0.5);
+      box-shadow: none;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .send-icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .loading-dots {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      padding: 4px 0;
+      justify-content: flex-start;
+      height: 22px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background-color: #86868b;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      80%,
+      100% {
+        transform: scale(0);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .app-container {
+        border-radius: 0;
+        height: 100vh;
+        max-width: 100%;
+        border: none;
+      }
+
+      .bubble {
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app-container">
+    <div class="header" style="justify-content: space-between;">
+      <h1 id="headerTitle" style="margin: 0; font-size: 18px;">香港多功能 AI 助手</h1>
+      <select id="langSelect" class="lang-switcher">
+        <option value="SC">简体中文</option>
+        <option value="TC">繁體中文 (粵語)</option>
+        <option value="EN">English</option>
+      </select>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+      <!-- Welcome message -->
+      <div class="message bot" id="welcomeMessage">
+        <div class="bubble" id="welcomeBubble">您好！我是您的多功能 AI 助手。您可以向我查询医院急症室等候时间、诊所筹额、食物业牌照、酒店推荐以及垃圾回收点等信息。请问有什么可以帮您？
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="samples" id="samplesContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="input-box">
+        <textarea id="queryInput" rows="1" placeholder="发送消息..."></textarea>
+        <button class="send-btn" id="sendBtn" disabled>
+          <svg class="send-icon" viewBox="0 0 24 24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatContainer = document.getElementById('chatContainer');
+    const queryInput = document.getElementById('queryInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const samplesContainer = document.getElementById('samplesContainer');
+    const langSelect = document.getElementById('langSelect');
+    const headerTitle = document.getElementById('headerTitle');
+    const pageTitle = document.getElementById('pageTitle');
+    const welcomeBubble = document.getElementById('welcomeBubble');
+
+    const UI_MESSAGES = {
+      SC: {
+        title: "香港多功能 AI 助手",
+        welcome: "您好！我是您的多功能 AI 助手。您可以向我查询医院急症室等候时间、诊所筹额、食物业牌照、酒店推荐以及垃圾回收点等信息。请问有什么可以帮您？",
+        placeholder: "发送消息...",
+        samples: [
+          { label: "🏥 急症室", text: "玛丽医院的急症室现在等候多久？" },
+          { label: "👨‍⚕️ 诊所筹额", text: "红磡家庭医学诊所最近四周平均筹额是多少？" },
+          { label: "🍗 牌照查询", text: "观塘有哪些烧味店？" },
+          { label: "🏨 酒店推荐", text: "尖沙咀酒店，入住2026-04-01，退房2026-04-03，评分≥4.3" },
+          { label: "♻️ 回收点", text: "我想去屯门找垃圾回收点" }
+        ]
+      },
+      TC: {
+        title: "香港多功能 AI 助手",
+        welcome: "你好！我係你嘅多功能 AI 助手。你可以向我查詢醫院急症室等候時間、診所籌額、食物業牌照、酒店推薦同埋垃圾回收點等資訊。請問有咩幫到你？",
+        placeholder: "發送消息...",
+        samples: [
+          { label: "🏥 急症室", text: "瑪麗醫院嘅急症室而家要等幾耐？" },
+          { label: "👨‍⚕️ 診所籌額", text: "紅磡家庭醫學診所最近四周平均籌額係幾多？" },
+          { label: "🍗 牌照查詢", text: "觀塘有咩燒味店？" },
+          { label: "🏨 酒店推薦", text: "尖沙咀酒店，入住2026-04-01，退房2026-04-03，評分≥4.3" },
+          { label: "♻️ 回收點", text: "我想去屯門搵垃圾回收點" }
+        ]
+      },
+      EN: {
+        title: "HK Multipurpose AI Assistant",
+        welcome: "Hello! I am your AI assistant. You can ask me about A&E waiting times, clinic quotas, food shop licences, hotel recommendations, and recycling spots. How can I help you?",
+        placeholder: "Send a message...",
+        samples: [
+          { label: "🏥 A&E Wait Time", text: "What is the current A&E waiting time at Queen Mary Hospital?" },
+          { label: "👨‍⚕️ Clinic Quota", text: "What's the average quota for Hung Hom Clinic in the last 4 weeks?" },
+          { label: "🍗 Food Licence", text: "What siu mei shops are there in Kwun Tong?" },
+          { label: "🏨 Hotels", text: "Tsim Sha Tsui hotels, check-in 2026-04-01, check-out 2026-04-03, rating >= 4.3" },
+          { label: "♻️ Recycling Spots", text: "I want to find a recycling spot in Tuen Mun" }
+        ]
+      }
+    };
+
+    function updateLanguage() {
+      const lang = langSelect.value;
+      const data = UI_MESSAGES[lang];
+
+      headerTitle.textContent = data.title;
+      pageTitle.textContent = data.title;
+      welcomeBubble.textContent = data.welcome;
+      queryInput.placeholder = data.placeholder;
+
+      samplesContainer.innerHTML = '';
+      data.samples.forEach(sample => {
+        const btn = document.createElement('button');
+        btn.className = 'sample-btn';
+        btn.textContent = sample.label;
+        btn.setAttribute('data-text', sample.text);
+
+        btn.addEventListener('click', () => {
+          queryInput.value = btn.getAttribute('data-text');
+          dispatchInput();
+          sendMessage();
+        });
+
+        samplesContainer.appendChild(btn);
+      });
+    }
+
+    langSelect.addEventListener('change', updateLanguage);
+
+    updateLanguage();
+
+    let isComposing = false;
+    queryInput.addEventListener('compositionstart', () => { isComposing = true; });
+    queryInput.addEventListener('compositionend', () => { isComposing = false; dispatchInput(); });
+
+    function dispatchInput() {
+      queryInput.style.height = 'auto';
+      queryInput.style.height = (queryInput.scrollHeight) + 'px';
+      sendBtn.disabled = queryInput.value.trim().length === 0;
+    }
+
+    queryInput.addEventListener('input', dispatchInput);
+
+    queryInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey && !isComposing) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+
+    sendBtn.addEventListener('click', sendMessage);
+
+    function scrollToBottom() {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function addMessage(text, isUser) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+
+      if (isUser) {
+        bubble.textContent = text;
+      } else {
+        // AI messages: support bold (**bold**) and newlines
+        let html = text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+          .replace(/\n/g, '<br>');
+        bubble.innerHTML = html;
+      }
+
+      msgDiv.appendChild(bubble);
+      chatContainer.appendChild(msgDiv);
+      scrollToBottom();
+      return msgDiv;
+    }
+
+    function addLoading() {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'message bot loading';
+
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+
+      const dots = document.createElement('div');
+      dots.className = 'loading-dots';
+      dots.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+
+      bubble.appendChild(dots);
+      msgDiv.appendChild(bubble);
+      chatContainer.appendChild(msgDiv);
+      scrollToBottom();
+      return msgDiv;
+    }
+
+    async function sendMessage() {
+      const text = queryInput.value.trim();
+      if (!text) return;
+
+      addMessage(text, true);
+
+      queryInput.value = '';
+      dispatchInput();
+      sendBtn.disabled = true;
+
+      const loadingMsg = addLoading();
+
+      try {
+        const resp = await fetch("/api/query", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: text, sys_lang: langSelect.value })
+        });
+
+        const data = await resp.json().catch(() => ({}));
+
+        if (!resp.ok) {
+          throw new Error(data.error || ("请求失败，HTTP " + resp.status));
+        }
+
+        loadingMsg.remove();
+
+        addMessage(data.result || "（没有返回结果）", false);
+
+      } catch (e) {
+        loadingMsg.remove();
+        addMessage("⚠️ 出错了：" + (e.message || e), false);
+      }
+    }
+  </script>
+</body>
+
+</html>

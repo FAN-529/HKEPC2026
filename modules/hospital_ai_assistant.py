@@ -3,14 +3,20 @@ import json
 import requests
 import sys
 import re
+import io
+import contextlib
 from typing import Dict, Optional
 
 from openai import OpenAI
 
-# 确保 Windows 控制台能正确显示中文字符
+# 确保 Windows 控制台能正确显示中文字符（避免重复包装导致 stdout 关闭）
 if sys.platform == 'win32':
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    try:
+        import io
+        if (getattr(sys.stdout, "encoding", "") or "").lower() != "utf-8":
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    except Exception:
+        pass
 
 
 ARK_API_KEY = "5e78a452-0a30-414f-8c73-f196a30172fa"
@@ -108,7 +114,7 @@ def get_ae_info(hospital_name: str, language: str = "SC"):
             # 翻译标签
             labels = {
                 "SC": {
-                    "title": "香港急症室实时等候时间",
+                    "title": "**香港急症室实时等候时间**",
                     "hosp": "医院名称",
                     "update": "更新时间",
                     "t1": "第一类 (危殆)",
@@ -119,7 +125,7 @@ def get_ae_info(hospital_name: str, language: str = "SC"):
                     "t45_95": "第四/五类 (非紧急) 95%"
                 },
                 "TC": {
-                    "title": "香港急症室實時等候時間",
+                    "title": "**香港急症室實時等候時間**",
                     "hosp": "醫院名稱",
                     "update": "更新時間",
                     "t1": "第一類 (危殆)",
@@ -130,7 +136,7 @@ def get_ae_info(hospital_name: str, language: str = "SC"):
                     "t45_95": "第四/五類 (非緊急) 95%"
                 },
                 "EN": {
-                    "title": "Hong Kong A&E Real-time Waiting Time",
+                    "title": "**Hong Kong A&E Real-time Waiting Time**",
                     "hosp": "Hospital Name",
                     "update": "Update Time",
                     "t1": "Category 1 (Critical)",
@@ -144,19 +150,15 @@ def get_ae_info(hospital_name: str, language: str = "SC"):
             
             l = labels.get(language, labels["SC"])
             
-            print(f"\n{'='*40}")
             print(f"  {l['title']}")
-            print(f"{'='*40}")
             print(f"{l['hosp']}: {hospital_name}")
             print(f"{l['update']}: {update_time}")
-            print(f"{'-'*40}")
             print(f"{l['t1']}      : {target.get('t1wt')}")
             print(f"{l['t2']}      : {target.get('t2wt')}")
             print(f"{l['t3_50']}  : {target.get('t3p50')}")
             print(f"{l['t3_95']}  : {target.get('t3p95')}")
             print(f"{l['t45_50']}: {target.get('t45p50')}")
             print(f"{l['t45_95']}: {target.get('t45p95')}")
-            print(f"{'='*40}\n")
         else:
             print(f"未找到医院: {hospital_name}")
 
@@ -226,14 +228,13 @@ def main():
         print("说明：https://www.volcengine.com/docs/82379/1399008")
         return
 
-    data_path = "data.txt"
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "data.txt")
     hospitals = load_hospital_data(data_path)
     
     if not hospitals:
         print("未找到医院数据。")
         return
 
-    print("--------------------------------"*2)
     while True:
         try:
             query = input("\n请输入您的问题 (输入 'exit' 退出): ")
@@ -264,3 +265,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# -------------------------- 可调用主入口 --------------------------
+def handle_query(user_query: str, force_lang: str = None) -> str:
+    """
+    统一给主程序调用的入口。
+    返回值：用于展示的字符串（内部会捕获各函数的 print 输出）。
+    """
+    if not ARK_API_KEY:
+        return "错误：请先在环境变量中设置 ARK_API_KEY（火山引擎方舟 API Key）。"
+
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "data.txt")
+    hospitals = load_hospital_data(data_path)
+    if not hospitals:
+        return "未找到医院数据。"
+
+    result = identify_hospital_and_language(user_query, hospitals)
+    lang = force_lang or result.get("language", "SC")
+
+    if lang == "EN":
+        hosp_name = result.get("hospital_en")
+    elif lang == "TC":
+        hosp_name = result.get("hospital_tc")
+    else:
+        hosp_name = result.get("hospital_sc")
+
+    if not hosp_name:
+        return "抱歉，我无法识别您提到的医院。"
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        get_ae_info(hosp_name, lang)
+    return buf.getvalue().strip()

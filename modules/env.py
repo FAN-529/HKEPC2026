@@ -1,10 +1,25 @@
 import requests
-from fuzzywuzzy import process
+try:
+    from fuzzywuzzy import process  # type: ignore
+except Exception:
+    process = None
 import os
+import io
+import contextlib
 from openai import OpenAI
 
+# -------------------------- 环境修复 --------------------------
+if "SSL_CERT_FILE" in os.environ:
+    del os.environ["SSL_CERT_FILE"]
+
 # -------------------------- 配置参数 --------------------------
-client = OpenAI(api_key="sk-e3196140b13443c79b1e5e2c0393376b", base_url="https://api.deepseek.com")
+_client = None
+
+def get_deepseek_client():
+    global _client
+    if _client is None:
+        _client = OpenAI(api_key="sk-e3196140b13443c79b1e5e2c0393376b", base_url="https://api.deepseek.com")
+    return _client
 
 RECYCLE_FEATURE_URL = "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query"
 AIR_QUALITY_URL = "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1629267205214_40635/FeatureServer/0/query"
@@ -35,6 +50,7 @@ HK_AREAS = list(AREA_DISTRICT_MAP.keys())
 def get_deepseek_response(prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
     """调用DeepSeek API获取响应"""
     try:
+        client = get_deepseek_client()
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=[
@@ -52,20 +68,29 @@ def parse_user_query(query: str) -> str:
     """使用DeepSeek API提取用户查询中的目标区域"""
     prompt = f"从以下文本中提取香港的地区名称：'{query}'。只返回地区名称，不要包含其他任何文字。可选的地区包括：{', '.join(HK_AREAS)}"
     area = get_deepseek_response(prompt)
-    
-    """进行模糊匹配以确保返回的是有效区域"""
-    if area:
+
+    # 如果 fuzzywuzzy 可用，用模糊匹配保证落在可选地区集合内
+    if area and process:
         best_match = process.extractOne(area, HK_AREAS)
         if best_match and best_match[1] > 80:
             return best_match[0]
-            
-    """如果API调用失败或无法识别，回退到旧方法"""
-    best_match = process.extractOne(query, HK_AREAS)
-    if best_match and best_match[1] > 60:
-        return best_match[0]
+
+    # 如果 fuzzywuzzy 不可用，则直接在文本中做包含判断
+    if area and not process:
+        for area_key in HK_AREAS:
+            if area_key in area:
+                return area_key
+
+    # 如果 API 调用失败或无法识别，回退到旧方法：要么 fuzzywuzzy，要么纯包含匹配
+    if process:
+        best_match = process.extractOne(query, HK_AREAS)
+        if best_match and best_match[1] > 60:
+            return best_match[0]
+
     for area_key in HK_AREAS:
         if area_key in query:
             return area_key
+
     return ""
 
 def fetch_recycle_points(area: str) -> list:
@@ -141,40 +166,56 @@ def fetch_nearby_air_quality(rec_y: float, rec_x: float, max_dist: float = 20000
         print(f"空气质量数据获取失败：{str(e)}")
         return []
 
-def display_results(points: list, area: str):
+def display_results(points: list, area: str, force_lang: str = None):
     """使用DeepSeek API生成并展示更自然的回复"""
     if not points:
-        prompt = f"请告诉用户在香港的「{area}」区域未找到相关的回收点信息。"
+        lang_str = "简体中文"
+        if force_lang == "EN":
+            lang_str = "English"
+        elif force_lang == "TC":
+            lang_str = "繁体中文（粤语口语）"
+        prompt = f"请使用{lang_str}告诉用户在香港的「{area}」区域未找到相关的回收点信息。"
         response = get_deepseek_response(prompt)
-        print(f"\n智能助手：{response}")
+        bot_prefix = "AI Assistant: " if force_lang == "EN" else "智能助手："
+        print(f"\n{bot_prefix}{response}")
         return
 
-    details = f"在「{area}」找到了 {len(points)} 个回收点。\n"
-    for i, p in enumerate(points, 1):
+    top_points = points[:5]
+    if len(points) > 5:
+        details = f"在「{area}」找到了 {len(points)} 个回收点，为你展示前 5 个：\n"
+    else:
+        details = f"在「{area}」找到了 {len(points)} 个回收点。\n"
+
+    for i, p in enumerate(top_points, 1):
         details += f"\n回收点 {i}:\n"
-        details += f"- 简体地址: {p['简体地址']}\n"
-        details += f"- 繁体地址: {p['繁体地址']}\n"
-        details += f"- 英文地址: {p['英文地址']}\n"
+        if force_lang == "EN":
+            details += f"- 地址: {p['英文地址']}\n"
+        elif force_lang == "TC":
+            details += f"- 地址: {p['繁体地址']}\n"
+        else:
+            details += f"- 地址: {p['简体地址']}\n"
         
         if p['y'] and p['x']:
             air_data = fetch_nearby_air_quality(p['y'], p['x'], max_dist=20000)
             if air_data:
-                details += f"  附近有 {len(air_data)} 个空气质量监测站:\n"
-                for j, ap in enumerate(air_data, 1):
-                    details += f"  - 监测站 {j}:\n"
-                    details += f"    - 名称: {ap['繁体站点']} / {ap['英文站点']}\n"
-                    details += f"    - 地址: {ap['繁体地址']}\n"
-                    details += f"    - 距离: {ap['距离']}米\n"
+                details += f"  附近的空气质量监测站:\n"
+                for j, ap in enumerate(air_data[:1], 1): # Top 1 only
+                    if force_lang == "EN":
+                        details += f"    - 名称: {ap['英文站点']} (距离: {ap['距离']}米)\n"
+                    else:
+                        details += f"    - 名称: {ap['繁体站点']} (距离: {ap['距离']}米)\n"
             else:
                 details += "  附近暂无空气质量监测数据。\n"
         else:
             details += "  无法获取位置信息，暂不展示空气质量数据。\n"
 
-    system_prompt = "你是一个香港生活助手，你需要根据我提供的数据，以友好、清晰、有条理的方式回复用户。请使用中文（简体）。"
+    lang_map = {"SC": "简体中文", "TC": "繁体中文（粤语口语）", "EN": "English"}
+    lang_str = lang_map.get(force_lang, "简体中文")
+    system_prompt = f"你是一个香港生活助手，你需要根据我提供的数据，以友好、清晰、有条理的方式回复用户。请使用 {lang_str}。不要使用 markdown 分隔符（如 ---）。回复的第一行请加粗作为标题。"
     prompt = f"这是我为你找到的信息，请整理并回复给用户：\n\n{details}"
-    
+    bot_prefix = "AI Assistant:\n" if force_lang == "EN" else "智能助手：\n"
     response = get_deepseek_response(prompt, system_prompt)
-    print(f"\n智能助手：\n{response}")
+    print(f"\n{bot_prefix}{response}")
 
 # -------------------------- 交互主入口 --------------------------
 def main():
@@ -200,3 +241,34 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# -------------------------- 可调用主入口 --------------------------
+def handle_query(user_query: str, force_lang: str = None) -> str:
+    """
+    统一给主程序调用的入口。
+    返回值：用于展示的字符串（内部会捕获各函数的 print 输出）。
+    """
+    area = parse_user_query(user_query)
+    if not area:
+        lang_str = "简体中文"
+        if force_lang == "EN":
+            lang_str = "English"
+        elif force_lang == "TC":
+            lang_str = "繁体中文（粤语口语）"
+        prompt = f"请使用{lang_str}告诉用户未能识别出有效的香港地区名称，并引导用户输入更明确的地点，例如'我想找铜锣湾的回收点'。"
+        response = get_deepseek_response(prompt)
+        bot_prefix = "AI Assistant: " if force_lang == "EN" else "智能助手： "
+        return f"{bot_prefix}{response}".strip()
+
+    points = fetch_recycle_points(area)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        msg = f"正在查询「{area}」的回收点及周边空气质量信息..."
+        if force_lang == "EN":
+            msg = f"Querying recycling points and nearby air quality for '{area}'..."
+        elif force_lang == "TC":
+            msg = f"正在查詢「{area}」嘅回收點及周邊空氣質素資訊..."
+        print(msg)
+        display_results(points, area, force_lang)
+    return buf.getvalue().strip()

@@ -2,13 +2,20 @@ import os
 import json
 import requests
 import sys
+import io
+import contextlib
 from typing import Dict, List
 
 from openai import OpenAI
 
 if sys.platform == 'win32':
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    # 多个模块被同进程 import 时，避免重复包装 sys.stdout 造成句柄关闭。
+    try:
+        import io
+        if (getattr(sys.stdout, "encoding", "") or "").lower() != "utf-8":
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    except Exception:
+        pass
 
 # ── 火山方舟配置 ──
 ARK_API_KEY = "5e78a452-0a30-414f-8c73-f196a30172fa"
@@ -223,13 +230,8 @@ def count_food_licences(type_code: str = None, district: str = None) -> int:
 def display_results(results: List[dict], total: int, language: str, query_desc: str):
     """格式化输出查询结果。"""
     if language == "EN":
-        print(f"\n{'='*60}")
-        print(f"  Food Premises Licence Query Results")
-        print(f"{'='*60}")
-        print(f"Query     : {query_desc}")
-        print(f"Total     : {total} licence(s) found")
-        print(f"Showing   : Top {len(results)}")
-        print(f"{'-'*60}")
+        print(f"**Food Premises Licence Query Results**")
+        print(f"Total: {total}")
         for i, r in enumerate(results, 1):
             print(f"\n  [{i}] {r['shop_en'] or 'N/A'}")
             print(f"      Type    : {r['licence_type_en']}")
@@ -240,28 +242,22 @@ def display_results(results: List[dict], total: int, language: str, query_desc: 
             if r['info']:
                 print(f"      Note    : {r['info']}")
     else:
-        print(f"\n{'='*60}")
-        print(f"  食物業處所牌照查詢結果")
-        print(f"{'='*60}")
-        print(f"查詢條件 : {query_desc}")
-        print(f"符合總數 : {total} 項")
-        print(f"顯示前   : {len(results)} 項")
-        print(f"{'-'*60}")
+        print(f"**食物业处所牌照查询结果**")
+        print(f"符合总数: {total}")
         for i, r in enumerate(results, 1):
             print(f"\n  [{i}] {r['shop_tc'] or '未提供'}")
-            print(f"      類型  : {r['licence_type_tc']}")
-            print(f"      地區  : {r['district_tc']}")
+            print(f"      类型  : {r['licence_type_tc']}")
+            print(f"      地区  : {r['district_tc']}")
             print(f"      地址  : {r['address_tc']}")
-            print(f"      牌照號: {r['licence_no']}")
-            print(f"      届滿日: {r['expiry']}")
+            print(f"      牌照号: {r['licence_no']}")
+            print(f"      届满日: {r['expiry']}")
             if r['info']:
                 info_desc = {
-                    "#I": "獲准出售活家禽(不包括活水禽及活鵪鶉)",
-                    "#J": "供應午餐飯盒的持牌食物製造廠",
+                    "#I": "获准出售活家禽(不包括活水禽及活鹌鹑)",
+                    "#J": "供应午餐饭盒的持牌食物制造厂",
                 }.get(r['info'], r['info'])
                 print(f"      批注  : {info_desc}")
-
-    print(f"\n{'='*60}\n")
+    print()
 
 
 # ────────────────── 主程序 ──────────────────
@@ -322,3 +318,46 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# -------------------------- 可调用主入口 --------------------------
+def handle_query(user_query: str, force_lang: str = None) -> str:
+    """
+    统一给主程序调用的入口。
+    返回值：用于展示的字符串（内部会捕获各函数的 print 输出）。
+    """
+    if not ARK_API_KEY:
+        return "错误：请先设置 ARK_API_KEY。"
+
+    parsed = parse_user_query(user_query)
+
+    type_code = parsed.get("type_code")
+    district = parsed.get("district")
+    shop_name = parsed.get("shop_name")
+    language = force_lang or parsed.get("language", "TC")
+
+    # 构建查询描述（尽量复用原先 main 的逻辑）
+    desc_parts = []
+    if district:
+        desc_parts.append(f"地區={district}" if language == "TC" else f"District={district}")
+    if type_code and type_code in TYPE_CODES:
+        t = TYPE_CODES[type_code]
+        desc_parts.append(t["tc"] if language == "TC" else t["en"])
+    if shop_name:
+        desc_parts.append(f"店名含「{shop_name}」" if language == "TC" else f"Shop contains '{shop_name}'")
+    query_desc = " + ".join(desc_parts) if desc_parts else ("全部" if language == "TC" else "All")
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        total = count_food_licences(type_code, district)
+        results = query_food_licences(type_code, district, shop_name, max_results=10)
+
+        if results:
+            display_results(results, total, language, query_desc)
+        else:
+            if language == "EN":
+                print("No matching food licences found.")
+            else:
+                print("未找到符合條件的食物業處所牌照。")
+
+    return buf.getvalue().strip()

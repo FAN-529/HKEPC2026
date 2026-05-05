@@ -3,13 +3,20 @@ import json
 import requests
 import sys
 import re
+import io
+import contextlib
 from typing import Dict
 
 from openai import OpenAI
 
 if sys.platform == 'win32':
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    # 多个模块被同进程 import 时，避免重复包装 sys.stdout 造成句柄关闭。
+    try:
+        import io
+        if (getattr(sys.stdout, "encoding", "") or "").lower() != "utf-8":
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    except Exception:
+        pass
 
 # ── 火山方舟配置 ──
 ARK_API_KEY = "5e78a452-0a30-414f-8c73-f196a30172fa"
@@ -156,7 +163,7 @@ def get_clinic_quota(clinic_name: str, language: str = "SC"):
     # 多语言标签
     labels = {
         "SC": {
-            "title": "家庭医学诊所 ─ 最近四周平均筹额",
+            "title": "**家庭医学诊所 ─ 最近四周平均筹额**",
             "clinic": "诊所名称",
             "district": "地区",
             "period": "统计期间",
@@ -164,7 +171,7 @@ def get_clinic_quota(clinic_name: str, language: str = "SC"):
             "na": "不适用",
         },
         "TC": {
-            "title": "家庭醫學診所 ─ 最近四星期平均籌額",
+            "title": "**家庭醫學診所 ─ 最近四星期平均籌額**",
             "clinic": "診所名稱",
             "district": "地區",
             "period": "統計期間",
@@ -172,7 +179,7 @@ def get_clinic_quota(clinic_name: str, language: str = "SC"):
             "na": "不適用",
         },
         "EN": {
-            "title": "Family Medicine Clinic - Average Quota (Past 4 Weeks)",
+            "title": "**Family Medicine Clinic - Average Quota (Past 4 Weeks)**",
             "clinic": "Clinic",
             "district": "District",
             "period": "Period",
@@ -194,18 +201,14 @@ def get_clinic_quota(clinic_name: str, language: str = "SC"):
     to_str = period.get("to", "")
     period_display = f"{from_str[:4]}/{from_str[4:6]}/{from_str[6:]} - {to_str[:4]}/{to_str[4:6]}/{to_str[6:]}" if from_str else ""
 
-    print(f"\n{'='*55}")
     print(f"  {L['title']}")
-    print(f"{'='*55}")
     print(f"{L['clinic']}  : {clinic_name}")
     print(f"{L['district']}: {record.get('District', '')}")
     print(f"{L['period']}: {period_display}")
     print(f"{L['session']}: {record.get('Doctor Consultation Sessions', '')}")
-    print(f"{'-'*55}")
     for day_en, day_label in zip(days_en, d_labels):
         val = record.get(day_en, L["na"])
         print(f"  {day_label:<6}: {val}")
-    print(f"{'='*55}\n")
 
 
 # ────────────────── 主程序 ──────────────────
@@ -215,7 +218,8 @@ def main():
         print("错误：请先设置 ARK_API_KEY。")
         return
 
-    clinics = load_clinic_data("data2.txt")
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "data2.txt")
+    clinics = load_clinic_data(data_path)
     if not clinics:
         print("未找到诊所数据。")
         return
@@ -250,3 +254,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# -------------------------- 可调用主入口 --------------------------
+def handle_query(user_query: str, force_lang: str = None) -> str:
+    """
+    统一给主程序调用的入口。
+    返回值：用于展示的字符串（内部会捕获各函数的 print 输出）。
+    """
+    if not ARK_API_KEY:
+        return "错误：请先设置 ARK_API_KEY。"
+
+    data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "data2.txt")
+    clinics = load_clinic_data(data_path)
+    if not clinics:
+        return "未找到诊所数据。"
+
+    result = identify_clinic_and_language(user_query, clinics)
+    lang = force_lang or result.get("language", "SC")
+
+    if lang == "EN":
+        name = result.get("clinic_en")
+    elif lang == "TC":
+        name = result.get("clinic_tc")
+    else:
+        name = result.get("clinic_sc")
+
+    if not name:
+        return "抱歉，我无法识别您提到的诊所。"
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        get_clinic_quota(name, lang)
+    return buf.getvalue().strip()
