@@ -46,6 +46,6 @@ Launch the backend service with the following command:
 python web_app.py
 ```
 
-###3. Access the Web Interface
+### 3. Access the Web Interface
 After the backend starts successfully, open your browser and navigate to the local service address:
 http://127.0.0.1:5000/
