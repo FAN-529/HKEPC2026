@@ -18,7 +18,7 @@ if sys.platform == 'win32':
         pass
 
 # ── 火山方舟配置 ──
-ARK_API_KEY = "5e78a452-0a30-414f-8c73-f196a30172fa"
+ARK_API_KEY = "-"
 ARK_BASE_URL = os.getenv("ARK_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3")
 ARK_MODEL = os.getenv("ARK_MODEL", "doubao-seed-1-6-flash-250828")
 
