@@ -8,7 +8,7 @@ import requests
 # ========== 配置 ==========
 SERPAPI_API_KEY = os.getenv(
     "SERPAPI_API_KEY",
-    "c1155c4c176d686cf2bf5695cf88597b7d2758dd6867103683a037cc465ec8be",
+    "-",
 )
 API_URL = "https://serpapi.com/search"
 
