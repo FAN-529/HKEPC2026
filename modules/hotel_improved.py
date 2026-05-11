@@ -10,7 +10,7 @@ import pandas as pd
 import requests
 
 # ========== 配置 ==========
-API_KEY = "c1155c4c176d686cf2bf5695cf88597b7d2758dd6867103683a037cc465ec8be"  # 替换为真实密钥
+API_KEY = "-"  # 替换为真实密钥
 API_URL = "https://serpapi.com/search"
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
