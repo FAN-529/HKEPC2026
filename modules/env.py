@@ -18,7 +18,7 @@ _client = None
 def get_deepseek_client():
     global _client
     if _client is None:
-        _client = OpenAI(api_key="sk-e3196140b13443c79b1e5e2c0393376b", base_url="https://api.deepseek.com")
+        _client = OpenAI(api_key="-", base_url="https://api.deepseek.com")
     return _client
 
 RECYCLE_FEATURE_URL = "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query"
